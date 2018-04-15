@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if(locals.isLoggedIn){ %>
+        <li><a href="/logout">Logout (Signed in as <%= locals.user.userName %>)</a></li>
+      <% } else { %>
+        <li><a href="/signup">Sign Up</a></li>
+        <li><a href="/signin">Sign In</a></li>
+      <%  } %>
+      <li><a href="/albums">Albums</a></li>
+      <li><a href="/albums/new">Create New Album</a></li>
+    </ul>
+  </div>
+</nav>
