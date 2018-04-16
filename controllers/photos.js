@@ -9,7 +9,14 @@ function photosIndex(req,res) {
     });
 }
 
+function photosShow(req,res) {
+  Photo
+    .findById(req.params.id)
+    .exec()
+    .then(photo => res.render('photos/show', {photo}));
+}
 
 module.exports = {
-  index: photosIndex
+  index: photosIndex,
+  show: photosShow
 };

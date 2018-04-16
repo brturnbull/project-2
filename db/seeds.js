@@ -11,9 +11,9 @@ Photo.collection.drop();
 Photo.create([{
   url: 'https://placeholdit.co//i/200x200?&bg=pink',
   comments: [
-    'amazing view',
-    'Tallest in the world from 1931 to 1970',
-    'NY is dope'
+    'cool beans',
+    'yo',
+    'blwekhn ewfw wetw qc jgb'
   ]
 },{
   url: 'https://placeholdit.co//i/200x200?&bg=pink',
@@ -31,7 +31,7 @@ Photo.create([{
   ]
 }])
 
-  .then(photos => console.log(`${photos.length} created`))
+  .then(photos => console.log(`${photos.length} photos added!`))
 
 
 

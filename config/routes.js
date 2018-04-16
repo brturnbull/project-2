@@ -10,12 +10,8 @@ router.get('/', (req, res) => res.render('home'));
 router.route('/users')
   .get(users.index);
 
-// router.route('/users/new')
-
-
 router.route('/users/:id')
   .get(users.show);
-
 
 router.route('/users/:id/edit')
   .get(users.edit);
@@ -23,6 +19,9 @@ router.route('/users/:id/edit')
 //resource photos
 router.route('/photos')
   .get(photos.index);
+
+router.route('/photos/:id')
+  .get(photos.show);
 
 //end of photos
 
