@@ -9,6 +9,22 @@ function usersIndex(req, res) {
     });
 }
 
-module.exports = {
-  index: usersIndex
+function usersShow(req,res) {
+  User
+    .findById(req.params.id)
+    .exec()
+    .then(user => res.render('users/show', {user}));
 }
+
+function usersEdit(req,res) {
+  User
+    .findById(req.params.id)
+    .exec()
+    .then(user => res.render('users/edit', {user}));
+}
+
+module.exports = {
+  index: usersIndex,
+  show: usersShow,
+  edit: usersEdit
+};
