@@ -1,12 +1,12 @@
-<nav class="blue accent-4">
+<nav class="blue lighten-5 black-text">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">InstaSpam</a>
+    <%# <a href="/home" class="brand-logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Spam_can.png" alt=""> </a> %>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if(locals.isLoggedIn){ %>
-        <li><a href="/logout">Logout (Signed in as <%= locals.user.userName %>)</a></li>
+        <li><a href="/logout">Log out</a></li>
       <% } else { %>
-        <li><a href="/signup">Sign Up</a></li>
-        <li><a href="/signin">Sign In</a></li>
+        <li><a href="/signup">Sign up</a></li>
+        <li><a href="/signin">Log in</a></li>
       <%  } %>
     </ul>
   </div>

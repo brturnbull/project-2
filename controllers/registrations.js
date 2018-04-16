@@ -1,9 +1,11 @@
-const User = require('../models/user');
+const User = require('../models/users');
 
+//go to the index page for registrations
 function newRoute(req, res) {
   res.render('registrations/index');
 }
 
+//create new using the content in the forms (req.body)
 function createRoute(req, res){
   User
     .create(req.body)
