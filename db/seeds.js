@@ -9,31 +9,20 @@ const Photo = require('../models/photos');
 Photo.collection.drop();
 
 Photo.create([{
-  url: 'https://placeholdit.co//i/200x200?&bg=pink',
-  comments: [
-    'cool beans',
-    'yo',
-    'blwekhn ewfw wetw qc jgb'
-  ]
+  photourl: 'https://placeholdit.co//i/200x200?&bg=pink',
+  caption: 'ciao'
 },{
-  url: 'https://placeholdit.co//i/200x200?&bg=pink',
-  comments: [
-    'Lorem anim id est laborum.',
-    'Lorem anim id est laborum.',
-    'Lorem anim id est laborum.'
-  ]
+  photourl: 'https://placeholdit.co//i/200x200?&bg=pink',
+  caption: 'ciao'
 },{
-  url: 'https://placeholdit.co//i/200x200?&bg=pink',
-  comments: [
-    'Lorem anim id est laborum.',
-    'Lorem anim id est laborum.',
-    'Lorem anim id est laborum.'
-  ]
+  photourl: 'https://placeholdit.co//i/200x200?&bg=pink',
+  caption: 'ciao'
+},{
+  photourl: 'https://placeholdit.co//i/200x200?&bg=pink',
+  caption: 'ciao'
 }])
 
   .then(photos => console.log(`${photos.length} photos added!`))
-
-
 
   .catch(err => console.log(err))
   .finally(()=> mongoose.connection.close());

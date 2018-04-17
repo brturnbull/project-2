@@ -1,7 +1,8 @@
-<nav class="blue lighten-5 black-text">
+<nav class="blue lighten-2">
   <div class="nav-wrapper">
     <%# <a href="/home" class="brand-logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Spam_can.png" alt=""> </a> %>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li> <a href="/new">Upload a photo</a></li>
       <% if(locals.isLoggedIn){ %>
         <li><a href="/logout">Log out</a></li>
       <% } else { %>

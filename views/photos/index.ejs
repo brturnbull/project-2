@@ -1,5 +1,17 @@
 <h1>photos index</h1>
 
 <% photos.forEach((photo) => { %>
-  <a href="/photos/<%=photo.id%>"><img src="<%=photo.url%>"></a>
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= photo.photourl %>">
+          <span class="card-title"><%= photo.caption %></span>
+        </div>
+        <div class="card-action">
+          <a href="/photos/<%=photo.id%>">view</a>
+        </div>
+      </div>
+    </div>
+  </div>
 <% }) %>
