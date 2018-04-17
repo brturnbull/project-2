@@ -26,7 +26,8 @@ router.route('/users')
   .get(users.index);
 
 router.route('/users/:id')
-  .get(users.show);
+  .get(users.show)
+  .put(users.update);
 
 router.route('/users/:id/edit')
   .get(users.edit);
@@ -47,6 +48,9 @@ router.route('/photos/:id')
 router.route('/photos/:id/edit')
   .get(photos.edit);
 //end of photos
+
+//comments
+//router.post photos id , secure route,
 
 //authentication
 router.route('/signup')

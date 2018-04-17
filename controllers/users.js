@@ -23,8 +23,20 @@ function usersEdit(req,res) {
     .then(user => res.render('users/edit', {user}));
 }
 
+function usersUpdate(req,res){
+  User
+    .findById(req.params.id)
+    .exec()
+    .then(user => {
+      user = Object.assign(user, req.body);
+      return user.save();
+    })
+    .then(user => res.redirect(`/users/${user._id}`));
+}
+
 module.exports = {
   index: usersIndex,
   show: usersShow,
-  edit: usersEdit
+  edit: usersEdit,
+  update: usersUpdate
 };

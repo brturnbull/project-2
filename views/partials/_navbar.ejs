@@ -1,8 +1,10 @@
 <nav class="black">
   <div class="nav-wrapper">
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="/photos/new">Upload a photo</a></li>
+      <li><a href="/photos">Explore</a></li>
       <% if(locals.isLoggedIn){ %>
+        <li><a href="/photos/new">Upload a photo</a></li>
+        <li><a href="/users/<%= user.id %>">View your profile</a></li>
         <li><a href="/logout">Log out</a></li>
       <% } else { %>
         <li><a href="/signup">Sign up</a></li>
