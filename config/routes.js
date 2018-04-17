@@ -33,14 +33,16 @@ router.route('/users/:id/edit')
 
 //resource photos
 router.route('/photos')
-  .get(photos.index);
+  .get(photos.index)
+  .post(photos.create);
 
-router.route('photos/new')
+router.route('/photos/new')
   .get(secureRoute, photos.new);
 
 router.route('/photos/:id')
   .get(photos.show)
-  .delete(photos.delete);
+  .delete(photos.delete)
+  .put(photos.update);
 
 router.route('/photos/:id/edit')
   .get(photos.edit);

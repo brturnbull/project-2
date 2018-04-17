@@ -10,12 +10,15 @@ const flash = require('express-flash');
 const session = require('express-session');
 const User = require('./models/users');
 const morgan = require('morgan');
+const customResponses = require('./lib/customResponses');
+
 
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 
 app.use(express.static(`${__dirname}/public`));
 app.use(expressLayouts);
+app.use(customResponses);
 
 const {port, databaseURI} = require('./config/environment');
 
@@ -40,6 +43,8 @@ app.use(session({
 app.use(flash());
 app.use(morgan('dev'));
 app.use(expressLayouts);
+
+app.use(customResponses);
 
 
 // actually implements the session

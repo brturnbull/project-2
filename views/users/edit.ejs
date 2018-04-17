@@ -1,1 +1,19 @@
-<h1>edit</h1>
+<h2>Edit your profile</h2>
+<img src="" alt="">
+<form class="col l12" action="/users/<%= user.id %>" method="post">
+  <div class="input-field col l12">
+    <input type="text" name="username" id="username_field">
+    <label for="username_field">Username</label>
+  </div>
+  <div class="input-field col l12">
+    <input type="email" name="email" id="email_field" required>
+    <label for="email_field">Email</label>
+  </div>
+  <div class="input-field col l12">
+    <input type="text" name="bio" id="bio_field" required>
+    <label for="bio_field">Tell us about yourself!</label>
+  </div>
+  <div class="input-field col l12">
+    <button class="green btn">Save</button>
+  </div>
+</form>
