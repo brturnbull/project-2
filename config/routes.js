@@ -50,7 +50,11 @@ router.route('/photos/:id/edit')
 //end of photos
 
 //comments
-//router.post photos id , secure route,
+router.route('/photos/:id/comments')
+  .post(photos.createComment);
+
+router.route('/photos/:id/comments/:commentId')
+  .delete(photos.deleteComment);
 
 //authentication
 router.route('/signup')

@@ -8,8 +8,8 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: { type: String, required: true },
   profilephoto: {type: String},
-  bio: String,
-  photos: [{type: mongoose.Schema.ObjectId, ref: 'Photo'}]
+  bio: String
+  // photos: [{type: mongoose.Schema.ObjectId, ref: 'Photo'}]
 });
 
 userSchema.methods.validatePassword = function validatePassword(password){

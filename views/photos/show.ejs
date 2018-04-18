@@ -1,9 +1,9 @@
 <br>
 <br>
-  <div class="row">
+  <div class="burgerShow row">
   <div class="col s5 m7">
     <div class="card">
-      <div class="card-image">
+      <div id="showpic" class="card-image">
         <img src="<%= photo.photourl %>">
         <span class="card-title"><%= photo.caption %></span>
       </div>
@@ -11,13 +11,31 @@
         <a href="<%= photo.id %>/edit">edit</a>
         <form method="POST" action="/photos/<%= photo._id %>">
         <input type="hidden" name="_method" value="DELETE">
-        <button>Delete</button>
+        <button class="material-icons" id="#deletecomment">delete_forever</button>
+      </form>
       </div>
     </div>
   </div>
-  <div class="input-field col l4">
-    <input type="text" name="profilephoto" id="profilephoto_field" value="comment here">
-    <a href="#"></a>
-  </div>
-</form>
+
+  <div class="pull right l12">
+      <% photo.comments.forEach(comment => { %>
+        <div class="comments">
+          <p><strong><%= comment.user.username %></strong><%= comment.content %></p>
+          <form method="post" action="/photos/<%= photo.id %>/comments/<%= comment.id %>">
+            <input type="hidden" name="_method" value="delete">
+            <button class="material-icons pull" id="#deletecomment" type="submit">delete_forever</button>
+          </form>
+        </div>
+      <% }); %>
+      <form class="enterComment col l12" action="/photos/<%= photo._id %>/comments" method="post">
+        <div class="input-field col l12">
+          <input type="text" name="content" id="comment_field" >
+          <label for="comment_field">Write a comment</label>
+        </div>
+        <div class="input-field col l12">
+          <button class="green btn">Post</button>
+        </div>
+      </form>
+    </div>
+
 </div>

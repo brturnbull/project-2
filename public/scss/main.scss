@@ -1,0 +1,97 @@
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+// --------------------------- INDEX PHOTOS ------------------------------------
+.card img {
+    height: 150px;
+    width:150px;
+    object-fit: cover;
+
+    &.materialized.active {
+      max-height: none;
+      object-fit: none;
+    }
+}
+
+div.card-action {
+  // height:30px;
+}
+
+body {
+  background-color:whitesmoke;
+}
+
+// -----------------------------------NAVBAR------------------------------------
+
+nav {
+  line-height: 70px;
+
+  li {
+
+    a {
+      font-size: 30px;
+      line-height:70px;
+      padding-left: 40px;
+    }
+  }
+}
+
+// -----------------------------USER PROFILE SHOW--------------------------------
+
+#profileimg {
+  height:200px;
+  width:200px;
+  margin-top:70px;
+  border-radius:100%;
+  object-fit: cover;
+}
+
+.profile-card {
+  margin-left: 50px;
+  margin-top: 70px;
+  width: 400px;
+  padding: 0;
+
+  h2 {
+    margin:0;
+  }
+}
+
+// --------------------------------PICTURE SHOW--------------------------------
+
+#showpic.card-image {
+    height:400px;
+    width:400px;
+    margin:0;
+
+    img {
+      height:400px;
+      width:400px;
+    }
+}
+
+button, input #deletecomment {
+  border:none;
+  color:red;
+  border-radius: 20p§x;
+}
+
+.comments {
+  display:flex;
+  align-self: flex-end ;
+  // border:1px solid red;
+  padding-left:25px;
+}
+
+form.enterComment {
+  align-self: baseline;
+  display:flex;
+  border:1px blue solid;
+}
+
+.burgerShow {
+  align-self: baseline;
+  display:flex;
+  border:1px solid red;
+}

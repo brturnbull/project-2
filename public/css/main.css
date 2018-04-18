@@ -1,4 +1,66 @@
+@charset "UTF-8";
+html {
+  font-family: 'Raleway', sans-serif; }
+
+.card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover; }
+  .card img.materialized.active {
+    max-height: none;
+    object-fit: none; }
+
 body {
-  background-color: blue; }
+  background-color: whitesmoke; }
+
+nav {
+  line-height: 70px; }
+  nav li a {
+    font-size: 30px;
+    line-height: 70px;
+    padding-left: 40px; }
+
+#profileimg {
+  height: 200px;
+  width: 200px;
+  margin-top: 70px;
+  border-radius: 100%;
+  object-fit: cover; }
+
+.profile-card {
+  margin-left: 50px;
+  margin-top: 70px;
+  width: 400px;
+  padding: 0; }
+  .profile-card h2 {
+    margin: 0; }
+
+#showpic.card-image {
+  height: 400px;
+  width: 400px;
+  margin: 0; }
+  #showpic.card-image img {
+    height: 400px;
+    width: 400px; }
+
+button, input #deletecomment {
+  border: none;
+  color: red;
+  border-radius: 20p§x; }
+
+.comments {
+  display: flex;
+  align-self: flex-end;
+  padding-left: 25px; }
+
+form.enterComment {
+  align-self: baseline;
+  display: flex;
+  border: 1px blue solid; }
+
+.burgerShow {
+  align-self: baseline;
+  display: flex;
+  border: 1px solid red; }
 
 /*# sourceMappingURL=main.css.map */
