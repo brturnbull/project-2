@@ -1,5 +1,5 @@
 <div class="row">
-  <h1>photos index</h1>
+  <h1 class="grey-text">Discover</h1>
     <% photos.forEach((photo) => { %>
       <div class="col s4 m4 l4">
         <div class="card s4 m4 l4">
@@ -9,7 +9,8 @@
           <div class="card-action">
             <a href="/photos/<%=photo.id%>">view</a>
             <% if(photo.user) { %>
-            <span class="card-title"><%= photo.user.username %></span>
+              <span class="card-title"><h6>"<%= photo.caption%>"</h6></span>
+            <span class="card-title"><h6><%= photo.user.username %></h6></span>
             <% } %>
           </div>
         </div>

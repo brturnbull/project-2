@@ -1,32 +1,36 @@
-<br>
+
 <br>
   <div class="burgerShow row">
   <div class="col s5 m7">
     <div class="card">
       <div id="showpic" class="card-image">
         <img src="<%= photo.photourl %>">
-        <span class="card-title"><%= photo.caption %></span>
       </div>
       <div class="card-action">
-        <a href="<%= photo.id %>/edit">edit</a>
-        <form method="POST" action="/photos/<%= photo._id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <button class="material-icons" id="#deletecomment">delete_forever</button>
+        <div class="showBox">
+          <span class="card-title"><%= photo.caption %></span>
+          <a href="<%= photo.id %>/edit">edit</a>
+          <form method="POST" action="/photos/<%= photo._id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="material-icons" id="#deletecomment">delete_forever</button>
+      </div>
       </form>
       </div>
     </div>
   </div>
 
-  <div class="pull right l12">
-      <% photo.comments.forEach(comment => { %>
-        <div class="comments">
-          <p><strong><%= comment.user.username %></strong><%= comment.content %></p>
-          <form method="post" action="/photos/<%= photo.id %>/comments/<%= comment.id %>">
-            <input type="hidden" name="_method" value="delete">
-            <button class="material-icons pull" id="#deletecomment" type="submit">delete_forever</button>
-          </form>
-        </div>
-      <% }); %>
+  <div class="rightcomments l12 ">
+    <div class="commentsThemselves pull right">
+        <% photo.comments.forEach(comment => { %>
+          <div class="comments">
+            <p><strong><%= comment.user  %></strong><%= comment.content %></p>
+            <form method="post" action="/photos/<%= photo.id %>/comments/<%= comment.id %>">
+              <input type="hidden" name="_method" value="delete">
+              <button class="material-icons right align commentErase" id="#deletecomment" type="submit">delete_forever</button>
+            </form>
+          </div>
+        <% }); %>
+    </div>
       <form class="enterComment col l12" action="/photos/<%= photo._id %>/comments" method="post">
         <div class="input-field col l12">
           <input type="text" name="content" id="comment_field" >

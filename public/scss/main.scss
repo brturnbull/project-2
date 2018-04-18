@@ -45,6 +45,7 @@ nav {
   margin-top:70px;
   border-radius:100%;
   object-fit: cover;
+  border: 3px dotted black;
 }
 
 .profile-card {
@@ -79,19 +80,40 @@ button, input #deletecomment {
 
 .comments {
   display:flex;
-  align-self: flex-end ;
-  // border:1px solid red;
+  align-items: baseline;
   padding-left:25px;
+}
+
+.commentsThemselves {
+  justify-content: flex-end;
+
+  button.commentErase {
+    border-radius:2px;
+    padding:0px;
+    margin-left: 40px;
+  }
+}
+
+.rightcomments {
+  // border:1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  flex-direction: column;
 }
 
 form.enterComment {
   align-self: baseline;
   display:flex;
-  border:1px blue solid;
-}
+  }
 
 .burgerShow {
   align-self: baseline;
   display:flex;
-  border:1px solid red;
+}
+
+.showBox {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
 }

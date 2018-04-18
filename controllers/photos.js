@@ -3,7 +3,7 @@ const Photo = require('../models/photos');
 function photosIndex(req,res) {
   Photo
     .find()
-    .populate('user')     
+    .populate('user')
     .exec()
     .then(photos => {
       console.log(photos);

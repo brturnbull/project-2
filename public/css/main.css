@@ -25,7 +25,8 @@ nav {
   width: 200px;
   margin-top: 70px;
   border-radius: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  border: 3px dotted black; }
 
 .profile-card {
   margin-left: 50px;
@@ -50,17 +51,33 @@ button, input #deletecomment {
 
 .comments {
   display: flex;
-  align-self: flex-end;
+  align-items: baseline;
   padding-left: 25px; }
+
+.commentsThemselves {
+  justify-content: flex-end; }
+  .commentsThemselves button.commentErase {
+    border-radius: 2px;
+    padding: 0px;
+    margin-left: 40px; }
+
+.rightcomments {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  flex-direction: column; }
 
 form.enterComment {
   align-self: baseline;
-  display: flex;
-  border: 1px blue solid; }
+  display: flex; }
 
 .burgerShow {
   align-self: baseline;
+  display: flex; }
+
+.showBox {
   display: flex;
-  border: 1px solid red; }
+  align-items: center;
+  justify-content: space-between; }
 
 /*# sourceMappingURL=main.css.map */
