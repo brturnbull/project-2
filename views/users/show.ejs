@@ -1,12 +1,11 @@
-<div class="">
-  <div class="">
+<div class="user-content">
     <img id="profileimg" class="pull left responsive-img" src="<%= user.profilephoto %>" alt="">
     <div class="col s12 m7 pull left profile-card">
       <div class="card horizontal">
         <div class="card-stacked">
           <div class="card-content">
-            <h2 class="header"><%= user.username %></h2>
-            <p><%= user.bio %></p>
+            <h2 class="header"><b>user</b> <%= user.username %></h2>
+            <p><b>bio</b> <br> <%= user.bio %></p>
           </div>
           <div class="card-action">
             <a href="/users/<%= user.id %>/edit">edit</a>
@@ -15,5 +14,4 @@
       </div>
   </div>
 </div>
-<br>
-<img src="./images/polaroid.png" alt="">
+  <img class ="polaroid responsive-img" src="/images/polaroid.png" alt="">

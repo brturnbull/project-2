@@ -2,6 +2,18 @@
 html {
   font-family: 'Raleway', sans-serif; }
 
+h2.welcome {
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  font-size: 120px;
+  margin-top: 100px;
+  color: orange; }
+
+h3 {
+  font-family: 'Seaweed Script', cursive;
+  font-size: 25px;
+  text-align: right; }
+
 .card img {
   height: 150px;
   width: 150px;
@@ -13,6 +25,10 @@ html {
 body {
   background-color: whitesmoke; }
 
+a.brand-logo {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 45px; }
+
 nav {
   line-height: 70px; }
   nav li a {
@@ -21,20 +37,33 @@ nav {
     padding-left: 40px; }
 
 #profileimg {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   margin-top: 70px;
   border-radius: 100%;
   object-fit: cover;
+  position: fixed;
+  left: 40px;
   border: 3px dotted black; }
 
 .profile-card {
-  margin-left: 50px;
+  margin-left: 20px;
   margin-top: 70px;
   width: 400px;
+  position: fixed;
+  left: 400px;
+  top: 100px;
   padding: 0; }
   .profile-card h2 {
-    margin: 0; }
+    margin: 0;
+    margin-bottom: 20px; }
+
+img.polaroid {
+  height: 500px;
+  position: absolute;
+  top: 250px;
+  right: -100px;
+  transform: rotate(10deg); }
 
 #showpic.card-image {
   height: 400px;
