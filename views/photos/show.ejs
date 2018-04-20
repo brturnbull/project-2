@@ -2,10 +2,10 @@
 <br>
   <div class="burgerShow row">
   <div class="col s5 m7">
-    <div class="card">
-      <div id="showpic" class="card-image">
-        <img src="<%= photo.photourl %>">
-      </div>
+    <div class="card showCard">
+        <div id="showpic responsive-img" class="card-image">
+          <img class="showpic" src="<%= photo.photourl %>">
+        </div>
       <div class="card-action">
         <div class="showBox">
           <span class="card-title"><%= photo.caption %></span>
@@ -23,10 +23,12 @@
     <div class="commentsThemselves pull right">
         <% photo.comments.forEach(comment => { %>
           <div class="comments">
-            <p><strong><%= comment.user  %></strong><%= comment.content %></p>
+          <% if(comment.user) {%>
+            <p><b><%= comment.user.username  %></b> <%= comment.content %></p>
+          <% } %>
             <form method="post" action="/photos/<%= photo.id %>/comments/<%= comment.id %>">
               <input type="hidden" name="_method" value="delete">
-              <button class="material-icons right align commentErase" id="#deletecomment" type="submit">delete_forever</button>
+              <button class="material-icons right align commentErase" id="#deletecomment" type="submit">close</button>
             </form>
           </div>
         <% }); %>

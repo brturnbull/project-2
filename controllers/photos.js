@@ -6,7 +6,6 @@ function photosIndex(req,res) {
     .populate('user')
     .exec()
     .then(photos => {
-      console.log(photos);
 
       res.render('photos/index', {photos});
     });
@@ -15,6 +14,7 @@ function photosIndex(req,res) {
 function photosShow(req,res) {
   Photo
     .findById(req.params.id)
+    .populate('user comments.user')
     .exec()
     .then(photo => {
       res.render('photos/show', {photo});
