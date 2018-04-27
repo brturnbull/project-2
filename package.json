@@ -5,6 +5,9 @@
   "repository": "git@github.com:brturnbull/project-2.git",
   "author": "Bridget <brturnbul@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index"
+  }
   "dependencies": {
     "bcrypt": "^2.0.0",
     "body-parser": "^1.18.2",
