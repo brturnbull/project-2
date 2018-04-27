@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node index"
-  }
+  },
   "dependencies": {
     "bcrypt": "^2.0.0",
     "body-parser": "^1.18.2",
